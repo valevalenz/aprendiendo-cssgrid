@@ -1,0 +1,60 @@
+.container{
+    display:grid;
+    /*  Podemos tener 3 columnas de tamaño automático con auto / para asignar el ancho podemos usar auto - porcentaje % - o fr */
+    grid-template-columns: 1fr 1fr 1fr;
+       /* column-gap y row-gap, las que podemos
+    modificar por separado si lo necesitamos. */
+    row-gap: 10px;
+}
+
+.grid-item{
+    border: 2px black solid;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+img{
+    width:auto;
+    height: 200px;
+}
+
+
+/* ejemplo layout */
+
+
+header{
+    background-color:black;
+    height: 15px;
+    color: white;
+    grid-area:header;
+}
+
+aside{
+    background-color:yellow;
+    height: 90vh;
+    grid-area:aside;
+}
+
+main{
+    background-color:pink;
+    height: 90vh;
+    grid-area:main;
+}
+
+footer{
+    background-color:blueviolet;
+    height: 20px;
+    grid-area:footer;
+}
+
+
+.container-layout{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    'header header' 
+    'aside main'
+    'footer footer';
+}
